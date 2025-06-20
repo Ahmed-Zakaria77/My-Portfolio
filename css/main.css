@@ -3512,7 +3512,7 @@ body.absolute_header .breadcrumb_area {
 
 .progress-wrap::after {
 	position: absolute;
-	content:"⮬";
+	content:"UP";
 	font-family: "Font Awesome 5 Pro";
 	text-align: center;
 	line-height: 46px;
