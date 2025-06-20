@@ -3512,7 +3512,7 @@ body.absolute_header .breadcrumb_area {
 
 .progress-wrap::after {
 	position: absolute;
-	content:"🡹";
+	content:"⮬";
 	font-family: "Font Awesome 5 Pro";
 	text-align: center;
 	line-height: 46px;
@@ -4084,13 +4084,13 @@ img.mfp-img {
 
 @keyframes gold-pulse {
   0% {
-    box-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold;
+    box-shadow: 0 0 5px gold, 0 0 3px gold, 0 0 5px gold;
   }
   50% {
-    box-shadow: 0 0 15px gold, 0 0 30px gold, 0 0 45px gold;
+    box-shadow: 0 0 5px gold, 0 0 5px gold, 0 0 20px gold;
   }
   100% {
-    box-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold;
+    box-shadow: 0 0 5px gold, 0 0 3px gold, 0 0  5px gold;
   }
 }
 
