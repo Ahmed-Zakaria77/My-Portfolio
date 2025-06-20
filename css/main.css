@@ -1854,7 +1854,6 @@ body.loaded {
 * ===============================
 */
 .skills-section {
-	padding-top: 120px;
 	padding-bottom: 120px;
 	background: var(--tj-theme-accent-1);
 }
@@ -4034,4 +4033,91 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 
-	
+	/* ------------------------- */
+	@keyframes slide-horizontal {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.section-title {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  background-color: #111;
+  margin: 60px auto;
+  border-radius: 12px;
+  z-index: 1;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* الخط المتحرك العلوي والسفلي */
+.section-title::before,
+.section-title::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  background: linear-gradient(90deg, transparent, gold, transparent);
+  background-size: 200% auto;
+  animation: slide-horizontal 2s linear infinite;
+  box-shadow: 0 0 10px gold;
+}
+
+/* الخط العلوي */
+.section-title::before {
+  top: 0;
+}
+
+/* الخط السفلي */
+.section-title::after {
+  bottom: 0;
+}
+
+
+@keyframes gold-pulse {
+  0% {
+    box-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold;
+  }
+  50% {
+    box-shadow: 0 0 15px gold, 0 0 30px gold, 0 0 45px gold;
+  }
+  100% {
+    box-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold;
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 8px;
+  animation: gold-pulse 2s infinite ease-in-out;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 2px solid gold;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.image-wrapper img {
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index:12;
+}
+
